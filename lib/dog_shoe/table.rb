@@ -11,8 +11,8 @@ module DogShoe
       end
 
       def css(selector, args=[])
-        out = super(selector, *args)
-        table_to_magic(out, args)
+        out = super(selector)#, *args)
+        table_to_magic(out, *args)
       end
     
       def table_to_magic(table, *args)

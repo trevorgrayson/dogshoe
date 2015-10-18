@@ -32,11 +32,13 @@ module DogShoe
         @values
       end
 
-      def find(*attrs)
+      def find(attrs)
         @doc = parse(fetch(attrs[:url]))
         results = css(attrs[:css])
-        self.class.new(results)
+        #self.class.new(results)
+        results
       end
+
     end
 
     def method_missing(name, *args, &block)
